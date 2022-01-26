@@ -22,9 +22,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		session.beginTransaction();
 		
 		// Add new Employee object
-	      EmployeeEntity emp = new EmployeeEntity(1, "Ashish", "Mondal", "ashismo@gmail.com");
+	      EmployeeEntity emp = new EmployeeEntity(1, "Ash", "lee", "ash@gmail.com");
 		
-	   // Ashish Mondal has two allocations called Project1 and Project2
+	   
 	      EmployeeAllocationEntity empAllocation = new EmployeeAllocationEntity(1, "Project1", emp);
 	      
 	      emp.setEmpAllocations(empAllocation);
@@ -34,10 +34,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	      session.save(emp);
 	      
 	   // Add another Employee object
-	      emp = new EmployeeEntity(2, "Ujan", "Mondal", "ujanmo@gmail.com");
+	      emp = new EmployeeEntity(2, "Goku", "Kakorote", "sayian@gmail.com");
 	      
-	   // Ujan Mondal has two allocations called Project2 and Project3. 
-	      // Also note that: In project 2, Ashish and Ujan both are allocated
 	      emp.setEmpAllocations(empAllocation);
 	      
 	      empAllocation = new EmployeeAllocationEntity(3, "Project3", emp);
